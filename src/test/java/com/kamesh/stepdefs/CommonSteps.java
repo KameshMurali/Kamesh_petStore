@@ -196,6 +196,7 @@ public class CommonSteps {
 		PetSerializeDeserialize pet = new PetSerializeDeserialize();
 		Pet petval = pet.petDeserializeToPojo(bodyStringValue);
 			String[] statusValue = {"available", "pending", "sold"};
+			step.write("Value of the field status:"+petval.getStatus());
 			Assert.assertEquals(Arrays.asList(statusValue).contains(petval.getStatus()),true);
 		}
 	
